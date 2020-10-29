@@ -1,0 +1,357 @@
+/*Archivo de estilos para el sitio web Curriculum vitae */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 200px;
+    font: 16px/1.6 Georgia, Times, serif;
+    color: #000;
+}
+
+h1, h2, h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1em;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+a {
+    color: #FF3A20;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/*Clase para esconder un elemento que será visible únicamente a los lectores de pantalla (aplicado para mejorar la accesibilidad: enlace que permite ir directamente al contenido principal de la página y acceso a la visualización directa del video en Youtube*/
+.sr {
+    position:absolute;
+    height:1px;    
+    width:1px;    
+    overflow:hidden;    
+    clip:rect(1px, 1px, 1px, 1px);
+}
+
+/*Clases aplicadas a las imágenes y videos del sitio */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-rounded {
+    border-radius: 50%;
+}
+
+.img-centered {
+    display: block;
+    margin: 15px auto;
+}
+
+.img-left {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 1rem;
+}
+
+figure {
+    width: 75%;
+    margin: 30px auto;
+}
+
+figcaption {
+    font-size: 0.8rem;
+}
+
+
+/*Contenedores del sitio*/
+
+
+header.header {
+    background-color: #fff;
+    color: #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #F7F2F3;
+    text-align: center;
+}
+
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+footer.footer p {
+    font-size: 0.8rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main > .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+
+/*Menú de navegación */
+
+nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+nav ul {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 3px;
+    margin: 15px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FF3A20;
+}
+
+nav ul li.active a {
+    color: #FF3A20;
+}
+
+/*Estilos para el artículo */
+
+article.article {
+    text-align: justify;
+}
+
+article.article h2, article.article h3 {
+    text-align: left;
+}
+
+div.autor {
+    background-color: #F7F2F3;
+    padding: 15px;
+    overflow: auto;
+}
+
+p.meta {
+    font-size: 1.3rem;
+}
+
+p.bio {
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+.intro {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+blockquote {
+    border-right: 5px solid #FF3A20;
+    background-color: #F7F2F3;
+    padding: 15px 30px;
+    margin: 15px 0;
+}
+
+article footer p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+
+
+
+/****************************
+Página de inicio
+*****************************/
+#presentation p {
+    font-size: 1.5rem;
+}
+
+.quote {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-style: italic;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+/*Cuando tengamos como mínimo 768px en el viewport, interesará que los elementos con estas clases floten a la izquierda o a la derecha, en caso contrario querremos que sigan el flujo normal de la página*/
+@media (min-width: 768px) {
+    .floatLeft {
+        float: left;
+    } 
+    .floatRight {
+        float: right;
+    }    
+    #presentation>.container>.floatLeft {
+        width: 50%;
+    }
+    #presentation>.container>.floatRight {
+        width: 40%;
+    }
+    #topics .floatLeft {
+        width: 33%;
+        padding: 15px;
+    }
+    #data>.container>.floatLeft {
+        width: 45%;
+        padding: 15px;
+    }
+    #data>.container>.floatRight {
+        width: 45%;
+        padding: 15px;
+    }
+}
+
+#presentation h2, #topics h2 {
+    padding: 0 0 30px 0;
+}
+
+#topics {
+    background-color: #FFFBD4;
+    text-align: center;
+}
+
+#topics img {
+    max-width: 100%;
+    height: auto;
+}
+
+#data h2 {
+    border-bottom: 1px solid #000;
+    text-align: left;
+}
+
+#data ul {
+    list-style-type: none;
+}
+
+#data ul.inLine li {
+    display: inline-block;
+}
+
+#data ul li a, #data ul li a:hover {
+    border-bottom: none;
+}
+
+#data .info {
+    margin-top: 2em;
+    font-weight: 700;
+}
+
+
+/****************************
+Imatges "hero" del lloc
+*****************************/
+.hero {
+    height: 500px;
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+
+#home {
+    background: #000 url(../../img/Captura.PNG) no-repeat bottom center;
+    color: #fff;
+    background-size: cover;
+}
+
+.hero p:first-child {
+    font-size: 2.3rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.hero p:nth-child(2) {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+    .hero p:first-child {
+        font-size: 3.3rem;
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+    }
+    .hero p:nth-child(2) {
+        font-size: 3rem;
+        font-weight: 200;
+    }
+}
+
